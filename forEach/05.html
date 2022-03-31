@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>男女人數計算機，透過物件整合資料</title>
+</head>
+<body>
+    <script>
+        let data = [
+            {
+                name: "Tom",
+                sex: "male"
+            }, {
+                name: "Mary",
+                sex: "woman"
+            },
+            {
+                name: "Jane",
+                sex: "woman"
+            }, {
+                name: "Jenny",
+                sex: "woman"
+            },
+            {
+                name: "Joan",
+                sex: "woman"
+            }
+        ];
+
+        let people = {
+            male: 0,
+            woman: 0
+        }
+
+        data.forEach(function(item){
+            if(item.sex === "male"){
+                people.male += 1;
+            }else{
+                people.woman += 1;
+            }
+        });
+
+        console.log(people);
+        
+    </script>
+</body>
+</html>

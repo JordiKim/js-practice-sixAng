@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物件搭配if練習</title>
+</head>
+<body>
+    <script>
+        // let tomStatus = {
+        //     name: "Tom",
+        //     age: "30",
+        //     status: ""
+        // }
+
+        // tomStatus.degree = 36.5;
+
+        // if(tomStatus.degree >= 37.5){
+        //     let ino = "您不得進入";
+        //     console.log(`${ino}`);
+        //     tomStatus.status = ino;
+        // }else{
+        //     let ino = "您可以進入";
+        //     console.log(`${ino}`);
+        //     tomStatus.status = ino;
+        // }
+
+        // console.log(tomStatus);
+    </script>
+
+    <script>
+        let peopleStatus = [{
+            name: "Tom",
+            age: "30",
+            status: ""
+        }]
+
+        peopleStatus[0].degree = 36.5;
+
+        if(peopleStatus[0].degree >= 37.5){
+            let ino = "您不得進入";
+            console.log(`${ino}`);
+            peopleStatus[0].status = ino;
+        }else{
+            let ino = "您可以進入";
+            console.log(`${ino}`);
+            peopleStatus[0].status = ino;
+        }
+    </script>
+</body>
+</html>

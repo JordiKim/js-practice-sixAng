@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>整合innerhtml資料，並搭配網頁初始化狀態（包到函式中），讓網頁開啟就執行</title>
+</head>
+<body>
+    <div>
+        <ul class="list"></ul>
+    </div>
+    <script>
+        let data = [
+            {
+                Charge: "免費",
+                name: "阿明充電站"
+            },{
+                Charge: "投幣式",
+                name: "小花充電站"
+            },{
+                Charge: "投幣式",
+                name: "小天充電站"
+            },{
+                Charge: "投幣式",
+                name: "阿花充電站"
+            }
+        ];
+
+        init();
+
+        function init(){
+            let list = document.querySelector(".list");
+            let str = "";
+
+            data.forEach(function(item, index){
+                let content = `<li>${item.name}，${item.Charge}</li>`;
+                
+                str += content;
+            });
+
+            console.log(str);
+
+            list.innerHTML = str;
+        }
+    </script>
+</body>
+</html>

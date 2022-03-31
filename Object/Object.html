@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        let home = {
+            motherName: "Mary",
+            fatherName: "Tom",
+            dogs: 3,
+            isWakeUp: false
+        };
+
+        // 新增屬性
+        home.baby = "chicken";
+
+        // 修改屬性的值，覆寫
+        home.dogs = 100;
+
+        // 刪除屬性
+        delete home.fatherName;
+
+        console.log(home);
+
+        // 讀取物件屬性方法1
+        console.log(home.motherName);
+
+        // 讀取物件屬性方法2
+        console.log(home["motherName"]);
+
+        // 讀取物件屬性方法3
+        let a = "motherName";
+        console.log(home[a]);
+    </script>
+</body>
+</html>

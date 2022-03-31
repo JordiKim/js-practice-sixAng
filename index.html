@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        // 新增 push, unshift
+        // 刪除 pop, shift
+        let colors = ["blue", "yellow", "red"];
+
+        colors.push("pink");
+        colors.unshift("black");
+
+        colors.pop();
+        colors.shift();
+
+        // 指定刪除資料
+        // 第一個數字是哪個位置
+        // 第二個數字是包含自己還需要往後刪除幾筆資料
+        colors.slice(1, 1);
+
+        for(i = 0; i < colors.length; i++){
+            console.log(colors[i]);
+        }
+    </script>
+</body>
+</html>
