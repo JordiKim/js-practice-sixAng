@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陣列操作 - filter資料篩選</title>
+</head>
+<body>
+    <script>
+        // JS array filter資料篩選
+        // 1.篩選出符合條件的內容，組合後回傳新陣列
+        // 2.不會影響到原陣列
+
+        let arr = [1, 5, 10];
+
+        let newArr = arr.filter( (item) => {
+            return item >= 5;
+        })
+
+        console.log(newArr);
+
+        let city = [
+            {
+                cityName: '高雄市',
+                cityData: ['前鎮區', '三民區']
+            },{
+                cityName: '台南市',
+                cityData: ['北區', '南區']
+            }
+        ]
+
+        
+        selectWho('高雄市');
+        
+        function selectWho(x){
+            let select = x;
+            let selectKS = city.filter( (item) => {
+                return item.cityName === select;
+            });
+                
+            let selectRes = selectKS.forEach( (i) => {
+                console.log(i.cityData);
+            });
+        }
+    </script>
+</body>
+</html>

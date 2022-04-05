@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陣列操作 - findIndex尋找資料索引</title>
+</head>
+<body>
+    <script>
+        // find 值提取出來
+        // findIndex 索引 編號
+
+        let colors = ['red', 'blue', 'black'];
+
+        
+        findColorFn('blue');
+        
+        function findColorFn(x){
+            let find = x;
+            let findColor = colors.findIndex( (item) => {
+                return item === find;
+            });
+
+            console.log(findColor);
+        }
+
+        let orders = [
+            {
+                name: '小華',
+                orderId: '1234'
+            },{
+                name: '小明',
+                orderId: '333'
+            },{
+                name: '阿花',
+                orderId: '42'
+            }
+        ];
+
+        
+        findOrderFn('42');
+        
+        function findOrderFn(x){
+            let findId = x;
+            let findOrder = orders.findIndex( (item) => {
+                return item.orderId === findId;
+            });
+
+            console.log(findOrder);
+            console.log(`${orders[findOrder].name}的訂單編號為${findOrder}`);
+        }
+
+    </script>
+</body>
+</html>

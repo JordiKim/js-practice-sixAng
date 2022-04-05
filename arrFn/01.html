@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭頭函式基本寫法</title>
+</head>
+<body>
+    <script>
+        // 函式表達式寫法
+        let numA = function(x){
+            return x * x;
+        }
+
+        // 箭頭函式寫法
+        let numB = (x) => {
+            return x * x * x;
+        }
+
+        console.log(numA(3));
+        console.log(numB(4));
+
+        // 箭頭函式只有一行時的縮寫寫法
+        // 1.會自動return
+        // 2.只有一個參數時可以不寫括號
+        // 3.如果沒有參數，還是需要保留一個括號
+        let numC = x => `數字相乘 ${x * x}`;
+
+        console.log(numC(4));
+    </script>
+</body>
+</html>

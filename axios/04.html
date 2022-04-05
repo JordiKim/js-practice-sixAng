@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>透過axios實作註冊post網路請求</title>
+</head>
+<body>
+    <h3 class="title"></h3>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const user = {
+            email: 'gonsakon@gmail.com',
+            password: '12345678'
+        }
+        
+        axios.post('https://hexschool-tutorial.herokuapp.com/api/signup', user)
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    </script>
+</body>
+</html>

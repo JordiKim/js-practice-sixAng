@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陣列操作 - find尋找頭一筆資料</title>
+</head>
+<body>
+    <script>
+        // JS array filter find 篩選
+        // 1.篩選出符合條件的內容，組合後回傳新陣列
+        // 2.不會影響到原陣列
+
+        let arr = [1, 5, 10];
+
+        let newArr = arr.find( (item) => {
+            return item >= 5;
+        })
+
+        console.log(newArr);
+    </script>
+</body>
+</html>
